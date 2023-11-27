@@ -1,0 +1,16 @@
+.botones {
+  /* Estilos generales para los botones */
+  position: absolute;
+  /* Otros estilos que desees aplicar a los botones */
+}
+
+/* Estilos específicos para cada variante de botón */
+.botones.btn-primary {
+  /* Estilos para la variante primary */
+  /* Puedes agregar aquí tus estilos específicos */
+  background-color: #EBECF0;
+  border: #EBECF0;
+  --bs-btn-color:#5B748A;
+
+}
+
