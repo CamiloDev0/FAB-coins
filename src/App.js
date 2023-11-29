@@ -98,48 +98,52 @@ function App() {
         <div>
           <img src="images/frame1.png" style={{ width: '100%', height: '100%', position: 'absolute' }} alt="" />
           <img src="images/boton.png" style={{ width: '60%', height: '7%', left: '20%', top: '76%', position: 'absolute' }} alt=""
-           onClick={() => { next();}}/>
+          onClick={() => { next();}}/>
         </div>
       ) : null}
 
-      {currentScreen === 2 ? (
+      {currentScreen === 2 ?
         <div>
-          <img src="images/frame3.png" style={{ width: '100%', height: '100%', position: 'absolute' }} alt="" />
-          <img src="images/boton.png" style={{ width: '40%', height: '10%', left: '70%', top: '90%', position: 'absolute' }}
-            alt="" onClick={() => { next();}}/>
+        {experienciaCompletadaCookie ?
+        <div>
+        <img src="images/frame7.png" style={{ width: '100%', height: '100%', position: 'absolute' }} 
+        onClick={() => {setCurrentScreen(1)}} alt="" />
         </div>
-      ) : null}
+        :
+        <div>
+        <img src="images/frame3.png" style={{ width: '100%', height: '100%', position: 'absolute' }} alt="" />
+        <img src="images/boton.png" style={{ width: '40%', height: '10%', left: '70%', top: '90%', position: 'absolute' }}
+        alt="" onClick={() => { next();}}/>
+        </div> }
+        </div>
+      :null}
 
       {currentScreen === 3 ? (
 
         <div  >
         <img src="images/frame4.png" style={{ width: '100%', height: '100%', position: 'absolute' }} alt="" />
-        <h1 style={{width:'60%',height:'2.12%',left:'20%',top:'15%',position:'absolute',color:'#00468C',fontFamily:'Graphik Trial',fontWeight:'700',wordWrap:'break-word',textAlign:'center'}}> {titulos[currentQuestion-1] }</h1>
-        <p style={{width:'70%',height:'6%',left:'14%',top:'25%',position:'absolute',color:'#637488',fontFamily:'Graphik Trial',fontWeDight:'400',wordBreak:'break-word'}} > {listTexts[currentQuestion-1]}  </p>
-        <Button className='botones' class="btn btn-primary" type="button" style={{width:'74.8%',height:'6%',left:'14.5%',top:'51.7%',position:'absolute',fontFamily: 'Graphik Trial',fontWeight: '500'}}
+        <h1 style={{width:'60%',height:'2.12%',left:'20%',top:'15%',position:'absolute',color:'#00468C',fontFamily:'Open Sans',fontWeight:900,textAlign:'center'}}> {titulos[currentQuestion-1] }</h1>
+        <h4 style={{width:'30%',height:'2.7%',left:'-1%',top:'4%',position:'absolute',color:'#00468C',fontFamily:'Open Sans',fontWeight:900,textAlign:'center',backgroundColor:'#EBECF0',borderRadius:'20px',fontSize:14}}>QUESTION {currentQuestion}</h4>
+        <p className='parrafo' style={{width:'80%',height:'6%',left:'10%',top:'28%',position:'absolute',color:'#637488',fontFamily:'Open Sans',fontWeDight:100,wordBreak:'break-word', fontSize:14}} > {listTexts[currentQuestion-1]}  </p>
+        <Button className='botones' class="btn btn-primary" type="button" style={{width:'90%',height:'6%',left:'5%',top:'51.7%',position:'absolute',fontFamily: 'Open Sans',fontWeight: '300',fontSize:14}}
         onClick={() => {handleAnswerClick(matrizTextos[currentQuestion - 1][0])}}>{matrizTextos[currentQuestion - 1][0]}</Button>
-        <Button className='botones' class="btn btn-primary" type="button" style={{width:'74.8%',height:'6%',left:'14.5%',top:'60.12%',position:'absolute',fontFamily: 'Graphik Trial',fontWeight: '500'}}
+        <Button className='botones' class="btn btn-primary" type="button" style={{width:'90%',height:'6%',left:'5%',top:'60.12%',position:'absolute',fontFamily: 'Open Sans',fontWeight: '300',fontSize:14}}
         onClick={() => {handleAnswerClick(matrizTextos[currentQuestion - 1][1])}}>{matrizTextos[currentQuestion - 1][1]}</Button>
-        <Button className='botones' class="btn btn-primary" type="button" style={{width:'74.8%',height:'6%',left:'14.5%',top:'68.52%',position:'absolute',fontFamily: 'Graphik Trial',fontWeight: '500'}}
+        <Button className='botones' class="btn btn-primary" type="button" style={{width:'90%',height:'6%',left:'5%',top:'68.52%',position:'absolute',fontFamily: 'Open Sans',fontWeight: '300',fontSize:14}}
         onClick={() => {handleAnswerClick(matrizTextos[currentQuestion - 1][2])}}>{matrizTextos[currentQuestion - 1][2]}</Button>
-        <Button className='botones' class="btn btn-primary" type="button" style={{width:'74.8%',height:'6%',left:'14.5%',top:'76.91%',position:'absolute',fontFamily: 'Graphik Trial',fontWeight: '500'}}
+        <Button className='botones' class="btn btn-primary" type="button" style={{width:'90%',height:'6%',left:'5%',top:'76.91%',position:'absolute',fontFamily: 'Open Sans',fontWeight: '300',fontSize:14}}
         onClick={() => {handleAnswerClick(matrizTextos[currentQuestion - 1][3])}}>{matrizTextos[currentQuestion - 1][3]}</Button>
         <img src="images/boton.png" style={{ width: '10%', height: '4%', left: '86%', top: '92%', position: 'absolute' }} alt="" onClick={() =>
         [nextQuestion()]}
           />
-       </div>
+      </div>
 
       ) : null}
 
       {currentScreen === 4 ? (
       <div>
-         {console.log(wronganswers)}
-        {count === 6 && experienciaCompletadaCookie ?
-        <div>
-        <img src="images/frame7.png" style={{ width: '100%', height: '100%', position: 'absolute' }} alt="" />
-        </div>
-        :null}
-        {count === 6 && (!experienciaCompletadaCookie) ? 
+
+        {count === 6 && (!experienciaCompletadaCookie) ?
         <div>
         <img src="images/frame5.png" style={{ width: '100%', height: '100%', position: 'absolute' }} alt="" />
         <img src="images/boton.png" style={{ width: '52%', height: '6%', left: '24%', top: '83%', position: 'absolute' }}
@@ -150,19 +154,19 @@ function App() {
         <div>
         <img src="images/frame6.png" style={{ width: '100%', height: '100%', position: 'absolute' }} alt="" />
         <div>
-        <h1 style={{width:'56%',left:'22%',top:'34%',position:'absolute',color: '#414042',
-        fontFamily: 'Graphik Trial',fontWeight: '700',wordWrap: 'break-word',backgroundColor:'#EBECF0',padding:'0',borderRadius:'10px' ,textAlign:'center' }}>{count}/6</h1>
+        <h1 className='titulo' style={{width:'56%',left:'22%',top:'34%',position:'absolute',color: '#414042',
+        fontFamily: 'Open Sans',fontWeight: '700',wordWrap: 'break-word',backgroundColor:'#EBECF0',borderRadius:'10px' ,textAlign:'center' }}>{count}/6</h1>
         </div>
 
         <img src="images/boton.png" style={{ width: '70%', height: 'auto',top:'85%',left:'15%',position: 'absolute' }} alt="" onClick={() => [reset()]}/>
         <div style={{position:'absolute',width:'70%',top:'54%',left:'10%',  textAlign: 'center'}}>
         <ul>
         <ul style={{position: 'relative' ,backgroundColor:'#EBECF0',padding:'0',borderRadius:'10px',marginBottom:'20px',
-        listStyle:'none',color:'#5B748A',fontFamily: 'Graphik Trial',
+        listStyle:'none',color:'#5B748A',fontFamily: 'Open Sans',
         fontWeight: '500',wordWrap: 'break-word' }}>
         {wronganswers.map((objeto, index) => (
           <li key={index}>
-            Question:  {objeto.currentQuestion}
+            QUESTION:  {objeto.currentQuestion}
           </li>
         ))}
       </ul>
