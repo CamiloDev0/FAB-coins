@@ -10,14 +10,14 @@
   /* Puedes agregar aquí tus estilos específicos */
   background-color: #EBECF0;
   border: #EBECF0;
-  --bs-btn-color:#5B748A;
+  --bs-btn-color: #5B748A;
 
 }
 
-.titulo  {
+.titulo {
   font-family: 'Open Sans', sans-serif;
 }
 
 .parrafo {
- font-weight: 200;
+  font-weight: 200;
 }
