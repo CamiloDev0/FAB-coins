@@ -321,13 +321,13 @@ function App() {
 					<img
 						src='images/boton.png'
 						style={{
-							width: '10%',
-							height: '4%',
-							left: '86%',
+							width: '150px',
+							height: '45px',
+							left: '75%',
 							top: '92%',
 							position: 'absolute',
 						}}
-						alt=''
+						alt='next'
 						onClick={() => [nextQuestion()]}
 					/>
 				</div>
