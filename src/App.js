@@ -321,7 +321,7 @@ function App() {
 					<img
 						src='images/boton.png'
 						style={{
-							width: '150px',
+							width: '94px',
 							height: '45px',
 							left: '75%',
 							top: '92%',
